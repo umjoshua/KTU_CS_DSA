@@ -8,23 +8,45 @@ email: umjoshua@gmail.com
 #include<stdlib.h>
 #define max 10
 int stack[max],top=-1;
+
+void display_stack();
+
+int isEmpty(){
+    if(top==-1)
+        return 1;
+    else
+        return 0;
+}
+int isFull(){
+    if(top==max-1)
+        return 1;
+    else
+        return 0;
+}
+
 void push(int n){
-    if(top==max-1){
-        printf("Stack overflow..\n");
+    if(isFull()){
+        printf("\nStack is full\n");
         return;
     }
     else stack[++top]=n;
+    display_stack();
 }
 void pop(){
-    if(top==-1){
-        printf("Stack underflow..\n");
+    if(isEmpty()){
+        printf("\nStack is empty.\n");
         return;
     }
-    printf("Popped element: %d \n",stack[top]);
+    printf("\nPopped element: %d \n",stack[top]);
     top--;
+    display_stack();
 }
 void display_stack(){
-    printf("Stack is : \n");
+    if(isEmpty()){
+        printf("\nStack is empty.\n");
+        return;
+    }
+    printf("\nStack is : \n");
     for(int i=0;i<=top;i++){
         printf("%d ",stack[i]);
     }
