@@ -23,12 +23,12 @@ int isFull(){
 }
 
 void enqueue(int num){
-    if(front==-1)
-        front=0;
     if(isFull()){
         printf("\nQueue is full\n");
         display_queue();return;
     }
+    if(front==-1)
+        front=0;
     queue[++rear]=num;
     display_queue();
 }
