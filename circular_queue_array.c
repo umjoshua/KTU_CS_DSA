@@ -60,9 +60,9 @@ void display_queue(){
             printf("%d ",queue[i]);
     }
     if(front>rear){
-        for(int i=front;i<=rear;i++)
+        for(int i=front;i<=max-1;i++)
             printf("%d ",queue[i]);
-        for(int i=0;i<=front;i++)
+        for(int i=0;i<=rear;i++)
             printf("%d ",queue[i]);
     }
 }
