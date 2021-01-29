@@ -126,19 +126,6 @@ void postorder_recursive(struct node* root){
         printf(" %d", ptr->data);
      }
 }
-void traversal_recursive(){
-    printf("\nRecursive Traversal:\n");
-    printf("1. Preoroder 2. Inorder 3. Postorder: ");
-    int choice; scanf("%d",&choice);
-    switch(choice){
-        case 1: printf("\nPreorder Traversal: "); preorder_recursive(root);
-                printf("\n"); break;
-        case 2: printf("\nInorder Traversal: "); inorder_recursive(root);
-                printf("\n"); break;
-        case 3: printf("\nPostorder Traversal: "); postorder_recursive(root);
-                printf("\n"); break;
-    }
-}
 //Stack operations for Iterative Traversals
 void push(struct node *item){
         if(top==(MAX-1)){
@@ -224,6 +211,19 @@ void postorder_iterative(struct node *root){
         }
     }
     printf("\n");
+}
+void traversal_recursive(){
+    printf("\nRecursive Traversal:\n");
+    printf("1. Preoroder 2. Inorder 3. Postorder: ");
+    int choice; scanf("%d",&choice);
+    switch(choice){
+        case 1: printf("\nPreorder Traversal: "); preorder_recursive(root);
+                printf("\n"); break;
+        case 2: printf("\nInorder Traversal: "); inorder_recursive(root);
+                printf("\n"); break;
+        case 3: printf("\nPostorder Traversal: "); postorder_recursive(root);
+                printf("\n"); break;
+    }
 }
 void traversal_iterative(){
     printf("\nIterative Traversal:\n");
