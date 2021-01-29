@@ -2,6 +2,7 @@
 Name: Binary tree traversals (Recursive and Interative) using linked list.
 Author: Joshua Mathew
 email: umjoshua@gmail.com
+NB: Tree grows towards right.
 */
 
 #include<stdio.h>
