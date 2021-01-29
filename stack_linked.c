@@ -1,3 +1,9 @@
+/*
+Name: Stack using array.
+Author: Joshua Mathew
+email: umjoshua@gmail.com
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 struct stack{
