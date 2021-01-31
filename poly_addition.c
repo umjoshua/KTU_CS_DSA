@@ -21,13 +21,13 @@ void display_poly(struct poly p[10],int n){
         if(p[i].coeff==0)
             continue;
         if(p[i].expo==0)
-            printf("%d ",p[i].coeff);
+            printf("%d",p[i].coeff);
         else
-            printf("%dx^%d ",p[i].coeff,p[i].expo);
+            printf("%dx^%d",p[i].coeff,p[i].expo);
         if(i==n-1)
             break;
         else
-            printf("+");
+            printf(" + ");
     }
     printf("\n");
 }
