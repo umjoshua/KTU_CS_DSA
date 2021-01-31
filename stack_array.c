@@ -6,43 +6,42 @@ email: umjoshua@gmail.com
 
 #include<stdio.h>
 #include<stdlib.h>
-#define max 10
-int stack[max],top=-1;
 
-void display_stack();
+int top=-1;
+void display_stack(int stack[],int max);
 
-int isEmpty(){
+int isEmpty(int max){
     if(top==-1)
         return 1;
     else
         return 0;
 }
-int isFull(){
+int isFull(int max){
     if(top==max-1)
         return 1;
     else
         return 0;
 }
 
-void push(int n){
-    if(isFull()){
+void push(int stack[],int max,int n){
+    if(isFull(max)){
         printf("\nStack is full\n");
         return;
     }
     else stack[++top]=n;
-    display_stack();
+    display_stack(stack,max);
 }
-void pop(){
-    if(isEmpty()){
+void pop(int stack[],int max){
+    if(isEmpty(max)){
         printf("\nStack is empty.\n");
         return;
     }
     printf("\nPopped element: %d \n",stack[top]);
     top--;
-    display_stack();
+    display_stack(stack,max);
 }
-void display_stack(){
-    if(isEmpty()){
+void display_stack(int stack[],int max){
+    if(isEmpty(max)){
         printf("\nStack is empty.\n");
         return;
     }
@@ -54,6 +53,9 @@ void display_stack(){
 }
 int main(){
     int choice,n;
+    printf("Enter the size of stack: ");
+    int max; scanf("%d",&max);
+    int stack[max];
     do{
     printf("\nEnter your choice:\n");
     printf("1. Push 2. Pop 3. Display 4. Exit : ");
@@ -61,11 +63,11 @@ int main(){
     switch (choice){
         case 1: printf("Enter the element: ");
             scanf("%d",&n);
-            push(n);
+            push(stack,max,n);
             break;
-        case 2: pop();
+        case 2: pop(stack,max);
             break;
-        case 3: display_stack();
+        case 3: display_stack(stack,max);
             break;
         case 4: printf("Exiting..\n");
             exit(0);
