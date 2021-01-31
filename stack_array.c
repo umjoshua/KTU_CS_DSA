@@ -57,21 +57,21 @@ int main(){
     int max; scanf("%d",&max);
     int stack[max];
     do{
-    printf("\nEnter your choice:\n");
-    printf("1. Push 2. Pop 3. Display 4. Exit : ");
-    scanf("%d",&choice);
-    switch (choice){
-        case 1: printf("Enter the element: ");
-            scanf("%d",&n);
-            push(stack,max,n);
-            break;
-        case 2: pop(stack,max);
-            break;
-        case 3: display_stack(stack,max);
-            break;
-        case 4: printf("Exiting..\n");
-            exit(0);
-        default: printf("Invalid choice\n");
-    }
+        printf("\nEnter your choice:\n");
+        printf("1. Push 2. Pop 3. Display 4. Exit : ");
+        scanf("%d",&choice);
+        switch (choice){
+            case 1: printf("Enter the element: ");
+                scanf("%d",&n);
+                push(stack,max,n);
+                break;
+            case 2: pop(stack,max);
+                break;
+            case 3: display_stack(stack,max);
+                break;
+            case 4: printf("Exiting..\n");
+                exit(0);
+            default: printf("Invalid choice\n");
+        }
     }while(choice!=4);
 }
