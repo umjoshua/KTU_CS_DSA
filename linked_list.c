@@ -96,18 +96,24 @@ void delete_first(){
     display_list();
 }
 void delete_end(){
+    struct node *ptr,*temp;
     if(start==NULL){
-        printf("List is empty!\n");
+        printf("\nList is empty!\n");
         return;
     }
-    struct node* temp, *ptr=start;
-    while(ptr->next->next!=NULL)
+    ptr=start;
+    while(ptr->next!=NULL){
+        temp=ptr; 
         ptr=ptr->next;
-    temp=ptr->next;
-    ptr->next=NULL;
-    free(temp);
-    display_list();
-
+    }
+    if(ptr==start){
+        delete_first(); return;
+    }
+    else{
+        temp->next=NULL;
+        free(ptr);
+        display_list();
+    }
 }
 void delete_pos(){
     printf("Enter position: ");
