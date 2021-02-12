@@ -11,7 +11,7 @@ int front=-1,rear=-1;
 void display_queue();
 
 int isEmpty(int max){
-    if (front==-1 || front==rear+1)
+    if (front==-1 || front>rear)
         return 1;
     else return 0;
 }
