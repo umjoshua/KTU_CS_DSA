@@ -1,5 +1,5 @@
 /*
-Name: Stack using array.
+Name: Queue using linked list.
 Author: Joshua Mathew
 email: umjoshua@gmail.com
 */
